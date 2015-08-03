@@ -12,7 +12,9 @@ print(capitalize_animals(['cheetah', 'hare', 'reindeer', 'calf']))
 File "animals.py", line 4, in capitalize_animals
 for animal in Animals:
 NameError: name 'Animals' is not defined
-이 메시지는 Python 인터프리터에서 제공하는 메시지와 같습니다. 두 번째 줄을 보면, line 2에서 문제가 발생했고, 세 번째와 네 번째 줄을 보면 for animal in Animals: 라는 줄에서 Animals라는 이름이 정의되어 있지 않다는 오류가 발생했다는 결과를 보여줍니다.
+이 메시지는 Python 인터프리터에서 제공하는 메시지와 같습니다. 
+두 번째 줄을 보면, line 2에서 문제가 발생했고, 
+세 번째와 네 번째 줄을 보면 for animal in Animals: 라는 줄에서 Animals라는 이름이 정의되어 있지 않다는 오류가 발생했다는 결과를 보여줍니다.
 
 문제
 에러에 표시된 대로 소스코드의 두 번째 줄을 고쳐서, animals에 있는 동물 이름들이 첫 번째 글자만 대문자로 치환되어 출력되도록 바꿔서 제출하기 바랍니다.
