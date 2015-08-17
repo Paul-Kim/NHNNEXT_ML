@@ -1,0 +1,89 @@
+<!--elice_3_3_27.html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elice_3_3_27</title>
+</head>
+<body>
+<div class="" data-reactid=".0.3.0.0.0.1.$0.0"><div class="instruction-content" data-reactid=".0.3.0.0.0.1.$0.0.0"><h2 id="principalcomponentanalysis">Principal Component Analysis</h2>
+
+<p>통계학에서 주성분 분석 (Principal Component Analysis) 는 고차원의 데이터를 상대적으로 저차원의 데이터로 환원시키는 알고리즘입니다. 예를 들어, 우리가 이번 과제에서 사용할 리그 오브 레전드 챔피언 데이터는 각각의 챔피언이 서로 연관되지 않은 174개의 attribute 를 가지고 있습니다. 그러므로, 이것은 174차원의 데이터가 됩니다. 이것을 바로 분석하는 것은 어렵습니다. 예를 들어, 챔피언들의 attribute 를 고려하여 그래프로 가시화하고 싶다고 할 때, 가장 쉬운 방법은 174개의 차원을 그대로 써서 174-차원 공간에 표시하는 것입니다. 하지만 이렇게 하면 간단하게 눈으로 알아보기 어렵기 때문에, 2D 평면에 projection (투사) 를 진행하게 됩니다. 이 투사를 챔피언들의 174 차원을 고려하여 가장 뚜렷한 차이를 내도록 투사할 수 있는 방법은 PCA 를 사용하는 것입니다. 이번 과제에서는 바로 이 문제를 풀어보도록 하겠습니다.</p>
+
+<p>주성분 분석에서는 서로 연관 가능성이 있는 고차원 공간의 표본들을 서로 선형적으로 연관되지 않은 저차원의 표본으로 변환합니다. 주성분 분석은 데이터를 한 개의 축으로 투사했을 때 가장 분산 (variance) 이 높아지는 축을 첫 번째 주성분, 그 다음으로 분산이 높은 축을 두 번째 주성분, ... 이라고 합니다. 일반적으로, 첫 번째 주성분이 원 데이터의 특성을 가장 잘 설명하며, 두 번째 주성분은 첫 번째 주성분보다 같거나 작은 만큼 원 데이터의 특성을 설명합니다. 세 번째는 두 번째보다 같거나 작습니다. 그러므로, 주성분 분석을 통해 매우 높은 차원을 가진 데이터를 작은 차원으로 투사하면서도 데이터의 특성을 최대한 보존할 수 있습니다.</p>
+
+<p>주성분 분석은 선형대수학에서는 특이값 분해 (Singular Vector Decomposition) 혹은 고유값 분해 (Eigenvalue Decomposition) 으로 응용됩니다. 이제 주성분 분석을 위해, <a href="http://scikit-learn.org">scikit-learn</a> 라이브러리에 구현된 PCA 함수를 사용하겠습니다.</p>
+
+<h3 id="sklearndecompositionpca">sklearn.decomposition.PCA</h3>
+
+<p>PCA를 사용하기 위하여 scikit-learn 에 구현된 함수를 호출합니다. 이 때, 단순히 몇 차원으로 줄일지에 대해서만 입력을 하면 됩니다. 이번 예제에서는 2차원 데이터를 1차원으로 줄이는 연습을 해 보겠습니다.</p>
+
+<p>먼저 데이터를 입력받은 뒤</p>
+
+<pre><code>twodim_data = {'x': [1, 2, 3, 4, 5], 'y': [1, -1, 2, -2, 3]}
+df = pd.DataFrame(twodim_data)
+</code></pre>
+
+<p>PCA 분석을 진행합니다.</p>
+
+<pre><code>pca = sklearn.decomposition.PCA(n_components = 1)
+pca.fit(df)
+pca_array = pca.transform(df)
+</code></pre>
+
+<p><span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo>)</mo><mo separator="true">,</mo><mo>(</mo><mn>2</mn><mo separator="true">,</mo><mo>−</mo><mn>1</mn><mo>)</mo><mo separator="true">,</mo><mo>(</mo><mn>3</mn><mo separator="true">,</mo><mn>2</mn><mo>)</mo><mo separator="true">,</mo><mo>(</mo><mn>4</mn><mo separator="true">,</mo><mo>−</mo><mn>2</mn><mo>)</mo><mo separator="true">,</mo><mo>(</mo><mn>5</mn><mo separator="true">,</mo><mo>−</mo><mn>3</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(1, 1), (2, -1), (3, 2), (4, -2), (5, -3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mord">1</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mopen">(</span><span class="mord">2</span><span class="mpunct">,</span><span class="mord">−</span><span class="mord">1</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mopen">(</span><span class="mord">3</span><span class="mpunct">,</span><span class="mord">2</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mopen">(</span><span class="mord">4</span><span class="mpunct">,</span><span class="mord">−</span><span class="mord">2</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mopen">(</span><span class="mord">5</span><span class="mpunct">,</span><span class="mord">−</span><span class="mord">3</span><span class="mclose">)</span></span></span></span></span> 의 다섯 개의 2차원 좌표가 <code>pca_array</code> 에 1차원 좌표로 변환되어 저장됨을 알 수 있습니다.</p>
+
+<pre><code>array([[-0.3047419 ],
+       [-1.84485979],
+       [ 1.31638021],
+       [-2.10428084],
+       [ 2.93750231]])
+</code></pre>
+
+<h2 id="">과제</h2>
+
+<p>이번 과제에서는 예제에서 보여주었던 2차원 데이터를 PCA를 이용하여 1차원으로 줄이는 실습을 진행하겠습니다.
+더하여, PCA가 찾아낸 주성분을 그려 실제로 분산이 높도록 하는지를 확인해보도록 하겠습니다.</p>
+
+<ol>
+<li>input 명령으로 2차원 점을 입력받아 데이터 프레임을 만듭니다. 데이터 프레임은 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.43056em;"></span><span class="strut bottom" style="height: 0.43056em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span></span> 개의 데이터 포인트를 입력받았을 경우 각각 <code>x</code> 와 <code>y</code> 두 개의 column 을 가진, 즉 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">×</span><span class="mord">2</span></span></span></span></span> 의 shape 을 가져야 합니다.</li>
+<li>주성분 분석을 실시합니다. 주성분 분석은 1차원으로 진행합니다. 이미 구현되어 있는 함수를 사용합니다.</li>
+<li>PCA 결과 및 각 점들에 대한 첫 번째 주성분을 리턴합니다. 위 예제의 <code>pca</code> 및 <code>pca_array</code> 와 같은 형식입니다.</li>
+<li>데이터의 각 점들과 첫 번째 주성분을 그래프로 그립니다. 파란 점들은 입력받은 데이터 포인트들을, 선은 PCA 를 통해 찾아낸 최적의 축을, 그리고 빨간 점들은 입력받은 데이터 포인트들을 주성분에 투사한 점들을 의미합니다. 정말로 빨간 선에 파란 점들을 수직으로 투사했을 때 최고의 분산값을 가지게 되는지 직접 살펴보기 바랍니다!</li>
+</ol>
+
+<h3 id="-1">입력</h3>
+
+<p>첫 줄에는 데이터의 개수가 입력됩니다 (<code>N</code>). 다음 줄부터 <code>N</code>개의 숫자가 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.07847em;">X</span></span></span></span></span>, <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.43056em;"></span><span class="strut bottom" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.03588em;">y</span></span></span></span></span> 로 나뉘어 입력됩니다. <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.68333em;"></span><span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.07847em;">X</span></span></span></span></span>와 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.43056em;"></span><span class="strut bottom" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.03588em;">y</span></span></span></span></span>는 <code>space</code>로 나뉘어져 입력됩니다.</p>
+
+<h4 id="1">테스트 입력 1</h4>
+
+<pre><code>10
+2.5 2.4
+0.5 0.7
+2.2 2.9
+1.9 2.2
+3.1 3.0
+2.3 2.7
+2.0 1.6
+1.0 1.1
+1.5 1.6
+1.1 0.9
+</code></pre>
+
+<h4 id="2">테스트 입력 2</h4>
+
+<pre><code>10
+-4.77 6.53
+-3.30 5.29
+-2.54 3.20
+-1.74 3.34
+-0.03 2.81
+0.41 1.90
+1.27 0.47
+2.30 -0.29
+3.17 -2.14
+4.10 -3.96
+</code></pre></div></div>
+</body>
+</html>
