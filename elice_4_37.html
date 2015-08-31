@@ -1,0 +1,81 @@
+<!--elice_4_37.html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elcie_3_37.html</title>
+</head>
+<body>
+<div class="instruction-content" data-reactid=".0.3.0.0.0.1.$0.0.0"><h2 id="predictingblooddonation">Predicting Blood Donation</h2>
+
+<p>지난 과제에서 서포트 벡터 머신(Support Vector Machine, SVM)의 사용법을 확인하였습니다.
+이번 과제에서는 다양한 속성(feature, attribute)를 가지는 데이터에 대해서 SVM을 적용해보겠습니다.
+지난 주에는 와인 데이터를 이용하였습니다.
+이번 주에는 또 다른 데이터인 헌혈 데이터를 이용하겠습니다.
+이 데이터는 I-Cheng Yeh. et al. 에 의해 의해 만들어진 데이터로, 헌혈자들의 헌혈 행동을 기록한 것입니다 (<a href="http://archive.ics.uci.edu/ml/datasets/Blood+Transfusion+Service+Center">출처: UCI Machine Learning Repository</a>).
+이를 통해 I-Cheng Yeh. et al. 은 가까운 미래에 다시 헌혈을 하러 올 것인지에 대한 예측을 수행하였습니다.</p>
+
+<p>다음 4가지 특성이 미래에 헌혈을 하러 왔는지와 함께 저장되어 있습니다.</p>
+
+<ol>
+<li>Recency - months since last donation</li>
+<li>Frequency - total number of donation</li>
+<li>Monetary - total blood donated in c.c.</li>
+<li>Time - months since first donation</li>
+<li>2007년 3월에 헌혈을 하였는지 (1: yes, 0: no)</li>
+</ol>
+
+<p>데이터를 만든 이들은 예측을 위해 새로운 모델을 제시하였습니다.
+하지만, 우리는 먼저 SVM을 통해 얼마나 성능이 나오는지 살펴보겠습니다.</p>
+
+<h2 id="">과제</h2>
+
+<p>이번 과제에서는 헌혈 데이터를 이용하도록 하겠습니다.</p>
+
+<ol>
+<li><code>load_data()</code> 를 이용해 헌혈 데이터를 읽어옵니다.
+디렉토리에 <code>blood_donation.csv</code> 파일이 주어집니다.
+파일 안 하나의 줄마다 한 헌혈자의 데이터가 기록되어 있으며, 각 항목은 <code>,</code>로 구분되어 있습니다. <code>pd.read_csv</code> 를 이용해 손쉽게 데이터를 읽어들일 수 있습니다.
+마지막 항목은 가까운 미래인 2007년 3월에 헌혈을 하였는지에 대한 정보, 즉 클래스로 <code>0, 1</code>의 형태로 되어 있습니다.
+나머지 항목은 위의 4개 속성에 대한 값들이 적혀져 있습니다.
+아래에 파일의 일부를 첨부하였습니다.
+해당 파일을 읽어 <code>X</code>에는 각 데이터의 속성이 들어있는 행렬, <code>y</code>에는 각 데이터의 클래스가 들어있는 행렬을 만듭니다.
+<code>X</code> 및 <code>y</code> 를 만들 때는 <code>pop</code> 함수를 이용하면 쉽습니다.
+지난 주 와인 데이터와 유사하오니 참고해주세요.</li>
+<li>각 속성 별로 값들의 범위가 매우 다릅니다.
+예를 들어 첫 번째 항목의 경우 일의 단위이지만, 세 번째 항목의 경우 천의 단위입니다.
+따라서 이를 해소하기 위해 standardization 을 수행하는 것은 일반적입니다.
+앞선 주차에서는 MinMaxScaler라는 함수를 이용하였습니다.
+이번 과제에서는 좀 더 쉬운 <code>sklearn.preprocessing.scale</code> 함수를 이용하도록 하겠습니다.
+해당 함수는 standardization을 원하는 데이터를 집어넣으면 이를 수행한 결과가 반환됩니다.</li>
+<li><code>run_linear_SVM</code> 함수를 구현합니다.
+해당 함수는 데이터 전체를 학습한 SVM 모델을 반환합니다.
+이 때, 커널로 <code>linear</code>를 사용합니다.</li>
+<li><code>run_poly_SVM</code> 함수를 구현합니다.
+해당 함수는 데이터 전체를 학습한 SVM 모델을 반환합니다.
+이 때, 커널로 <code>poly</code>를 사용합니다.
+또한, <code>degree</code> 파라메터를 전달하여 몇 차 다항식으로 할 것인지 정합니다.</li>
+<li><code>run_rbf_SVM</code> 함수를 구현합니다.
+해당 함수는 데이터 전체를 학습한 SVM 모델을 반환합니다.
+이 때, 커널로 <code>rbf</code>를 사용합니다.</li>
+<li>학습된 SVM 모델을 바탕으로 테스트를 진행합니다.
+이 때, 테스트는 학습할 때 이용되지 않은 새로운 데이터를 통해 진행됩니다.
+각 모델에 <code>score</code> 함수를 테스트 데이터를 파라메터로 전달하면서 실행시키면, 모델의 정확도 값을 반환합니다.
+이를 반환하는 함수를 구현하시면 됩니다.</li>
+</ol>
+
+<h4 id="blood_donationcsv">blood_donation.csv 의 일부</h4>
+
+<pre><code>Recency,Frequency,Monetary,Time,class
+2.00,50.00,12500.00,98.00,1.00
+0.00,13.00,3250.00,28.00,1.00
+1.00,16.00,4000.00,35.00,1.00
+2.00,20.00,5000.00,45.00,1.00
+1.00,24.00,6000.00,77.00,0.00
+4.00,4.00,1000.00,4.00,0.00
+2.00,7.00,1750.00,14.00,1.00
+1.00,12.00,3000.00,35.00,0.00
+2.00,9.00,2250.00,22.00,1.00
+</code></pre></div>
+</body>
+</html>

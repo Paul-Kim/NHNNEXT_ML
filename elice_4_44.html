@@ -1,0 +1,41 @@
+<!--elice_4_44.html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elice_4_44</title>
+</head>
+<body>
+<div class="instruction-content" data-reactid=".0.3.0.0.0.1.$0.0.0"><h2 id="pcavslda">PCA vs LDA</h2>
+
+<p>앞에 과제에서 LDA를 이용하니 성능이 매우 좋게 나오는 것을 알 수 있습니다.
+특히, 성능이 좋지 못했던 RBF 커널의 경우에도 매우 좋게 나옵니다.
+그럼 실제 어떤 차이가 있는지 그래프를 통해 눈으로 직접 확인해보겠습니다.</p>
+
+<p>이번 과제를 포함하여 전체적인 결과에 대해 조원분들과 얘기를 나눠보는 것을 추천드립니다.</p>
+
+<h2 id="">과제</h2>
+
+<p>이번 과제도 역시 앞에서 이용한 와인 데이터를 살펴보겠습니다.
+그리고 PCA, LDA, SVM를 이용하여 2차원 그래프를 그려보도록 하겠습니다.</p>
+
+<ol>
+<li><p>디렉토리에 <code>wine.csv</code> 파일이 주어집니다. 파일 안 하나의 줄마다 하나의 와인 데이터가 기록되어 있으며, 각 항목은 <code>,</code>로 구분되어 있습니다. <code>pd.read_csv</code> 를 이용해 손쉽게 데이터를 읽어들일 수 있습니다.</p>
+
+<p>첫 번째 항목은 어떤 품종의 포도를 이용하였는지에 대한 정보, 즉 클래스로 <code>1, 2, 3</code>의 형태로 되어 있습니다.
+나머지 항목은 위의 13개 속성에 대한 값들이 적혀져 있습니다.
+아래에 파일의 일부를 첨부하였습니다.</p>
+
+<p>해당 파일을 읽어 <code>feature_df</code>에는 각 데이터의 속성이 들어있는 행렬, <code>class_df</code>에는 각 데이터의 클래스가 들어있는 행렬을 만듭니다. <code>feature_df</code> 및 <code>class_df</code> 를 만들 때는 <code>wine_df.pop('class')</code> 를 이용하면 쉽습니다. 전체 178개의 데이터가 있으니 <code>feature_df</code>는 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>7</mn><mn>8</mn><mo>×</mo><mn>1</mn><mn>3</mn></mrow><annotation encoding="application/x-tex">178 \times 13</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">1</span><span class="mord">7</span><span class="mord">8</span><span class="mbin">×</span><span class="mord">1</span><span class="mord">3</span></span></span></span></span>, <code>class_df</code>는 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>7</mn><mn>8</mn><mo>×</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">178 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.64444em;"></span><span class="strut bottom" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">1</span><span class="mord">7</span><span class="mord">8</span><span class="mbin">×</span><span class="mord">1</span></span></span></span></span>의 모습을 가져야 합니다.</p></li>
+<li><p>주성분 분석을 실시합니다. 주성분 분석은 2차원으로 진행합니다.</p></li>
+<li><p>LDA를 실행합니다.
+앞의 과제에서 구현한 것과 같이 하시면 됩니다.</p></li>
+<li><p><code>run_linear_SVM</code> 함수를 구현합니다.
+해당 함수는 데이터 전체를 학습한 SVM 모델을 반환합니다.
+이 때, 커널로 <code>linear</code>를 사용합니다.</p></li>
+<li><p><code>run_rbf_SVM</code> 함수를 구현합니다.
+해당 함수는 데이터 전체를 학습한 SVM 모델을 반환합니다.
+이 때, 커널로 <code>rbf</code>를 사용합니다.</p></li>
+</ol></div>
+</body>
+</html>

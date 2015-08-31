@@ -1,0 +1,36 @@
+<!--elice_3_32.html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elcie_3_32.html</title>
+</head>
+<body>
+	<div class="instruction-content" data-reactid=".0.3.0.0.0.1.$0.0.0"><h2 id="handwrittendigitclassification">Handwritten Digit Classification</h2>
+
+<p>이제 손글씨 분석을 진행해 보겠습니다. 손글씨 데이터는 scikit-learn에 이미 준비되어 있는 데이터를 사용합니다. 0부터 9까지의 숫자에 대한 10개의 클래스의 글씨 데이터이며, 총 1797개의 손글씨 데이터가 있습니다. 각각의 손글씨 데이터는 8 * 8 격자 (픽셀) 로 이루어져 있으며 각 격자는 0부터 16까지의 세기로 표현됩니다. 이미 준비된 함수</p>
+
+<pre><code>display_digits(digits, 113)
+</code></pre>
+
+<p>을 통해 데이터셋에 있는 손글씨의 모양을 눈으로 확인해 볼 수 있습니다. 위의 예제에 있는 113번째 손글씨는 숫자 2를 의미합니다. 실행 후 확인해 보기 바랍니다. 113의 숫자를 0부터 1796 까지의 인덱스로 바꿔보면서 데이터셋이 어떻게 구성되어 있는지 확인할 수 있습니다. 또한, 각 데이터 포인트는 어떤 숫자인지 레이블이 되어 있으므로 PCA + K-Means의 성능을 직접 측정해 볼 수도 있습니다!</p>
+
+<p>리그 오브 레전드의 각 챔피언이 174차원의 데이터를 가졌던 것처럼, 이번 과제에서 각 데이터 포인트 (숫자) 는 8 * 8 = 64 개의 feature 를 가지고 있어 64차원의 데이터를 가집니다. 이번 과제에서는 PCA에서 <code>num_components</code> 를 1부터 64까지 증가시키면서 차원의 증가에 따라 성능 향상이 얼마나 많이 이루어지는지 그래프를 통해 확인해보겠습니다.</p>
+
+<h2 id="">과제</h2>
+
+<p>이번 과제에서는 PCA + K-means 알고리즘의 성능을 측정하겠습니다. 벤치마킹 그래프를 통해, principal component 의 개수가 몇 개일때 어떤 성능이 나오는지 확인해 보기 바랍니다.</p>
+
+<ol>
+<li><code>sklearn</code> 의 digits 데이터셋을 로드합니다. 이미 코드에 구현되어 있습니다.</li>
+<li>(Optional) <code>display_digits</code> 함수를 이용해 데이터셋을 확인합니다.</li>
+<li>이미 구현된 <code>run_PCA</code> 함수 및 <code>run_kmeans</code> 함수를 확인합니다.
+<ul>
+<li><code>run_PCA</code>는 Scaling이 진행된 <code>data</code> 변수를 사용합니다. <code>sklearn.decomposition.PCA</code> 함수를 이용해 주성분 분석을 진행하고, 결과물 <code>pca_array</code> 를 리턴합니다.</li>
+<li><code>run_kmeans</code>는 <code>run_PCA</code> 에서 리턴한 <code>pca_array</code>, <code>num_clusters</code>, 그리고 <code>initial_centroid_indices</code> 를 입력받아서 K-means 클러스터링을 진행합니다. 각 데이터 포인트에 대한 클러스터 label 을 리턴합니다.</li></ul></li>
+<li><code>benchmark()</code> 함수를 이용하여 벤치마킹을 진행합니다. 주성분의 수가 변함에 따라 성능을 측정하기 위해 <code>sklearn.metrics.homogeneity_score</code> 를 사용합니다. <code>num_components</code> 를 1부터 64까지 바꾸면서 주성분의 개수가 성능에 얼마나 영향을 미치는지 확인합니다.
+<ul>
+<li><code>sklearn.metrics.homogeneity_score(ground_truth, estimated_classes)</code> 를 이용해, 데이터셋에 이미 존재하는 <code>ground_truth</code> 와 K-means 클러스터링을 통해 레이블된 <code>estimated_classes</code> 의 일치도를 판별합니다.</li></ul></li>
+</ol></div>
+</body>
+</html>

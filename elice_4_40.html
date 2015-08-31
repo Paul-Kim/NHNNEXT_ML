@@ -1,0 +1,42 @@
+<!--elice_4_40.html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elice_4_40</title>
+</head>
+<body>
+<div class="instruction-content" data-reactid=".0.3.0.0.0.1.$0.0.0"><h2 id="clusteringstocks">Clustering Stocks</h2>
+
+<p>이번 과제에서는 한국의 KOSPI 실제 데이터를 사용하여 같이 오르고 같이 내리는 주식들이 어떤 것들이 있는지 살펴보겠습니다. 이전 과제에서 계산한 주가의 오르고 내림을 미리 준비된 <code>stock_fluctuations.pkl</code> 에서 입력받을 수 있습니다. 미리 준비된 파일은 기간동안 1400 개 이상의 주가 정보를 가지고 있는 종목들에 대한 주식의 fluctuation 값이며, 총 633개의 종목이 저장되어 있습니다.</p>
+
+<pre><code>pd.read_pickle("./stock_fluctuations.pkl")
+</code></pre>
+
+<p>이제 이 파일을 읽고 PCA, K-Means 알고리즘을 적용하여 같이 오르고 같이 내리는 주식들의 클러스터를 구해보겠습니다.</p>
+
+<h2 id="">과제</h2>
+
+<p>이번 과제에서는 지금까지 배웠던 알고리즘을 다시 연습하기 위해 PCA 및 K-Means 알고리즘의 사용을 직접 코딩하겠습니다.</p>
+
+<ol>
+<li><code>krx_listed_companies.csv</code> 에서 KOSPI 에 상장된 기업들의 주식 코드와 이름을 받습니다. 이것을 <code>code_to_name</code> 이라는 Python dictionary 에 저장합니다. 예를 들어,
+<ul>
+<li><code>code_to_name['031860'] = 'A-motion'</code> 과 같이 저장합니다.</li></ul></li>
+<li><code>stock_fluctuations.pkl</code> 을 로드하여 주가 데이터베이스에 대한 데이터 프레임을 생성합니다. 이것을 <code>stocks_df</code> 에 저장합니다. 주가의 등락은 이미 계산되어 있습니다.</li>
+<li><code>stocks_df</code> 를 transpose 합니다.</li>
+<li><code>run_PCA()</code> 함수 안에서 주성분 분석을 수행합니다. 이 때
+<ul>
+<li>scaling 은 수행하지 않습니다.</li>
+<li>이전 과제들처럼 <code>pca_array</code> 를 리턴합니다.</li></ul></li>
+<li><code>run_kmeans</code> 함수 안에서 K-Means 클러스터링을 수행합니다. 이 때
+<ul>
+<li><code>run_PCA</code> 함수에서 리턴된 <code>pca_array</code> 를 사용하여 K-means 클러스터링을 진행해야 합니다.</li>
+<li><code>initial_centroid_indices</code> 를 입력받아 <code>initial_centroids</code> 를 생성해야 합니다. 예를 들어, <code>initial_centroid_indices</code>가 <code>[0, 1, 2]</code> 라면 <code>initial_centroids</code> 는 첫번째, 두번째, 그리고 세번째 데이터 포인트입니다.</li>
+<li><code>sklearn.cluster.KMeans</code>의 파라미터 <code>n_init</code>은 1로 지정합니다.</li>
+<li>데이터 포인트들의 클러스터 값을 리스트로 리턴합니다.</li></ul></li>
+<li>(Optional) <code>plot_stocks</code> 를 실행하여 주가 클러스터를 확인합니다. 맨 마지막 파라미터 <code>display_cluster_idx</code> 는 표시할 클러스터의 인덱스입니다. 만약 K-Means 클러스터링에서 클러스터의 개수를 20으로 지정했다면 <code>display_cluster_idx</code> 는 0부터 19까지 지정할 수 있습니다.</li>
+<li>(Optional) <code>get_closest_stocks</code> 를 실행하여 특정 주가와 가장 가깝게 움직이는 주식들을 뽑아 봅니다. <code>005930</code> 은 삼성전자 주식입니다.</li>
+</ol></div>
+</body>
+</html>
