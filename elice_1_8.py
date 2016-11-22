@@ -21,7 +21,8 @@ numpy.array([[1, 2],
 
 A = \begin{pmatrix} 1 & 4 & 5 & 8 \\ 2 & 1 & 7 & 3 \\ 5 & 4 & 5 & 9 \end{pmatrix}A=​⎝​⎛​​​1​2​5​​​4​1​4​​​5​7​5​​​8​3​9​​​⎠​⎞​​
 A를 준비된 코드 안의 matrix_tutorial() 함수 안에 선언하여, 만들어진 A가 리턴될 수 있도록 합니다.
-'''import numpy
+'''
+import numpy
 
 def main():
     print(matrix_tutorial())
