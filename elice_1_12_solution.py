@@ -47,8 +47,15 @@ def main():
 def read_data():
     # 1
 
+    N = int(input())
+    X = []
+    Y = []
 
     # 2
+    for i in range(N):
+        [xi, yi] = [float(x) for x in input().strip().split()]
+        X.append(xi)
+        Y.append(yi)
 
     return (N, X, Y)
 

@@ -73,7 +73,9 @@ def main():
 
 def matrix_tutorial():
     A = numpy.array([[1,4,5,8], [2,1,7,3], [5,4,5,9]])
+
     B = A.reshape((6,2))
+    B = numpy.concatenate((B, [[2, 2], [5, 3]]), 0)
 
     [C, D] = numpy.split(B, 2, axis = 0)
 
