@@ -19,10 +19,12 @@
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_10_solution.coverage" NAME="elice_1_10_solution Coverage Results" MODIFIED="1479781096905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_12.coverage" NAME="elice_1_12 Coverage Results" MODIFIED="1479856887582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_12_solution.coverage" NAME="elice_1_12_solution Coverage Results" MODIFIED="1479863136204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_14_solution.coverage" NAME="elice_1_14_solution Coverage Results" MODIFIED="1479914928389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_14_solution.coverage" NAME="elice_1_14_solution Coverage Results" MODIFIED="1479932640503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_11_solution.coverage" NAME="elice_1_11_solution Coverage Results" MODIFIED="1479801267479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_6.coverage" NAME="elice_1_6 Coverage Results" MODIFIED="1479780182949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_2_17_solution.coverage" NAME="elice_2_17_solution Coverage Results" MODIFIED="1479933919912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_9_solution.coverage" NAME="elice_1_9_solution Coverage Results" MODIFIED="1479780645960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_2_17.coverage" NAME="elice_2_17 Coverage Results" MODIFIED="1479933788961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_14_solution2.coverage" NAME="elice_1_14_solution2 Coverage Results" MODIFIED="1479914300514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NHNNEXT_ML$elice_1_13_solution.coverage" NAME="elice_1_13_solution Coverage Results" MODIFIED="1479908232518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -77,17 +79,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elice_2_17.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="elice_2_17.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elice_2_17.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="308">
+              <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+              <folding>
+                <element signature="e#2835#2847#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elice_1_14_solution.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="elice_2_17_solution.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elice_2_17_solution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+              <folding>
+                <element signature="e#2835#2847#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elice_1_14_solution.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elice_1_14_solution.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
@@ -150,6 +166,8 @@
         <option value="$PROJECT_DIR$/student.dat" />
         <option value="$PROJECT_DIR$/elice_1_14_solution2.py" />
         <option value="$PROJECT_DIR$/elice_1_14_solution.py" />
+        <option value="$PROJECT_DIR$/elice_2_17_solution.py" />
+        <option value="$PROJECT_DIR$/elice_2_17.py" />
       </list>
     </option>
   </component>
@@ -225,43 +243,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.elice_1_14_solution">
-    <configuration default="false" name="elice_1_12" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NHNNEXT_ML" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elice_1_12.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="elice_1_12_solution" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NHNNEXT_ML" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elice_1_12_solution.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.elice_2_17_solution">
     <configuration default="false" name="elice_1_13_solution" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -312,6 +294,42 @@
       <module name="NHNNEXT_ML" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elice_1_14_solution2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="elice_2_17" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NHNNEXT_ML" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elice_2_17.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="elice_2_17_solution" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NHNNEXT_ML" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elice_2_17_solution.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -525,19 +543,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.elice_1_12" />
-      <item index="1" class="java.lang.String" itemvalue="Python.elice_1_12_solution" />
-      <item index="2" class="java.lang.String" itemvalue="Python.elice_1_13_solution" />
-      <item index="3" class="java.lang.String" itemvalue="Python.elice_1_14_solution" />
-      <item index="4" class="java.lang.String" itemvalue="Python.elice_1_14_solution2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.elice_1_13_solution" />
+      <item index="1" class="java.lang.String" itemvalue="Python.elice_1_14_solution" />
+      <item index="2" class="java.lang.String" itemvalue="Python.elice_1_14_solution2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.elice_2_17" />
+      <item index="4" class="java.lang.String" itemvalue="Python.elice_2_17_solution" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.elice_1_14_solution" />
-        <item index="1" class="java.lang.String" itemvalue="Python.elice_1_14_solution2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.elice_1_13_solution" />
-        <item index="3" class="java.lang.String" itemvalue="Python.elice_1_12_solution" />
-        <item index="4" class="java.lang.String" itemvalue="Python.elice_1_12" />
+        <item index="0" class="java.lang.String" itemvalue="Python.elice_2_17_solution" />
+        <item index="1" class="java.lang.String" itemvalue="Python.elice_2_17" />
+        <item index="2" class="java.lang.String" itemvalue="Python.elice_1_14_solution" />
+        <item index="3" class="java.lang.String" itemvalue="Python.elice_1_14_solution2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.elice_1_13_solution" />
       </list>
     </recent_temporary>
   </component>
@@ -556,9 +574,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -849,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elice_2_17.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elice_1_13_solution.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -906,6 +916,26 @@
         <state relative-caret-position="368">
           <caret line="132" column="6" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elice_2_17_solution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+          <folding>
+            <element signature="e#2835#2847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elice_2_17.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+          <folding>
+            <element signature="e#2835#2847#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
