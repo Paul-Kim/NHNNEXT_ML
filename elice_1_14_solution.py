@@ -120,12 +120,9 @@ def do_multivariate_regression(N, X, Y):
     return results
 
 def get_effective_variables(results):
-    eff_vars = []
-	# 3
 
-    for i in range(len(results.pvalues)):
-        if results.pvalues[i] < 0.05:
-            eff_vars.append("x%d" % i)
+    # 3
+    eff_vars = [ "x%d" % i for i in range(len(results.pvalues)) if results.pvalues[i] < 0.05 ]
 
     return eff_vars
 
