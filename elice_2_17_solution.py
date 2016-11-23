@@ -43,6 +43,7 @@ P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{1}{6}}{\frac{2}{6}} = \frac{1}{2
 
 import numpy
 import matplotlib.pyplot as plt
+import statsmodels.api as sm
 
 def main():
     num_flips = int(input())
@@ -93,12 +94,22 @@ def visualize(coin_results):
 
     heads = numpy.array(heads)
     tails = numpy.array(tails)
+    line = numpy.polyfit(heads, tails, deg=1)
 
     plt.plot(heads, tails, "r-")
+    plt.plot(heads, line[0] * heads + line[1], "b-")
+
+    min_lim = min(plt.xlim()[0], plt.ylim()[0])
+    max_lim = max(plt.xlim()[1], plt.ylim()[1])
+
+    plt.xlim(min_lim, max_lim)
+    plt.ylim(min_lim, max_lim)
+
     plt.xlabel("heads")
     plt.ylabel("tails")
     plt.title("Coin Flip : %d times" % (num_heads + num_tails))
-    return plt.show()
+    plt.show()
+    return line
     #
     # return elice_utils.visualize_boxplot("Coin Flip: %d times" % (num_heads + num_tails),
     #     [heads_percentage, tails_percentage],
